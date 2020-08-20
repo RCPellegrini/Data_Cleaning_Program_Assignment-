@@ -7,16 +7,16 @@ date: "20/08/2020"
 ## Project Description
 The purpose of this project is to demonstrate the ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis.
 
-###Collection of the raw data
+### Collection of the raw data
 Human Activity Recognition Using Smartphones Data Set - UCI Machine Learning Repository
 - zip files that were downloaded and unziped
 
-###Notes on the original (raw) data 
+### Notes on the original (raw) data 
 Six ".txt" files that were merged to only one. 
 
-##Creating the tidy datafile
+## Creating the tidy datafile
 
-###Guide to create the tidy data file
+### Guide to create the tidy data file
 1. downloading zip file: https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip to ./data
 2. extracting zip file: ./data/data.zip to ./data/UCI HAR Dataset
 3. merging all *_test.txt and *_train.txt files into one dataset: mergedData
@@ -26,14 +26,14 @@ Six ".txt" files that were merged to only one.
 7. aggregate mean_std_data into tidyData with the average of each variable for each activity and each subject.
 8. write tidyData to file ./data/tidy_data.txt
 
-##Description of the variables in the tinyData.txt file
+## Description of the variables in the tinyData.txt file
 
 - Dimensions of the dataset: 
  > dim(tidyData)
 [1] 181  81
 
 
-###Variables
+### Variables
 
 The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. 
 Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing 
