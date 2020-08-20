@@ -14,14 +14,14 @@ training_set_x <- read.table('./UCI HAR Dataset/train/X_train.txt')
 training_activity_label_y <- read.csv('./UCI HAR Dataset/train/y_train.txt', header = FALSE, sep = ' ')
 training_subject <- read.csv('./UCI HAR Dataset/train/subject_train.txt',header = FALSE, sep = ' ')
 
-training_data <-  data.frame(training_subject, training_labels_y, training_set_x)
+training_data <-  data.frame(training_subject, training_activity_label_y, training_set_x)
 names(training_data) <- c(c('subject', 'activity_label'), features)
 
 test_set_x <- read.table('./UCI HAR Dataset/test/X_test.txt')
 test_activity_label_y <- read.csv('./UCI HAR Dataset/test/y_test.txt', header = FALSE, sep = ' ')
 test_subject <- read.csv('./UCI HAR Dataset/test/subject_test.txt', header = FALSE, sep = ' ')
 
-test_data <-  data.frame(test_subject, test_labels_y, test_set_x)
+test_data <-  data.frame(test_subject, test_activity_label_y, test_set_x)
 names(test_data) <- c(c('subject', 'activity_label'), features)
 
 #head(training_data)
@@ -93,6 +93,7 @@ names(mean_std_data) <- descrip_names
 # set with the average of each variable for each activity and each subject.
     # - Upload your data set as a txt file created with write.table() using 
     # row.name=FALSE
+
 ### Usisng stats aggregate
 
 tidyData <- aggregate(mean_std_data[,3:81], by = list(activity_label = mean_std_data$activity_label, subject = mean_std_data$subject),FUN = mean)
